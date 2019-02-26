@@ -11,4 +11,13 @@
 
 // [10, 14]
 
-function miniMaxSum(arr) {}
+function miniMaxSum(arr) {
+  arr.sort();
+  let min = 0;
+  let max = 0;
+  for (let i = 0; i < arr.length - 1; i++) {
+    min = min + arr[i];
+    max = max + arr[i + 1];
+  }
+  console.log(min, max);
+}
